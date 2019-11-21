@@ -55,7 +55,7 @@ class MainViewModel : ViewModel {
                         try {
                             val user = apiRepo.getUsers(userID)
                             withContext(Main) {
-                                _user.value = user
+                                value = user
                                 theJob.complete()
                             }
                         } catch (e: Exception) {

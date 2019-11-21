@@ -24,7 +24,7 @@ android {
     }
 }
 
-def retrofitVersion = '2.3.0'
+def retrofitVersion = '2.6.0'
 def material_version = "1.0.0"
 def daggerVersion = '2.24'
 def rxcalladapter_version = '2.5.0'
@@ -71,6 +71,7 @@ dependencies {
 
     //Co routines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
 
     //testing
     testImplementation 'junit:junit:4.12'
