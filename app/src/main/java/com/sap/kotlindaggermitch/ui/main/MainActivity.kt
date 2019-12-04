@@ -1,11 +1,11 @@
-package com.sap.kotlindaggermitch.ui
+package com.sap.kotlindaggermitch.ui.main
 
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.sap.kotlindaggermitch.R
-import com.sap.kotlindaggermitch.viewmodel.MainViewModel
+import com.sap.kotlindaggermitch.viewmodel.main.MainViewModel
 import com.sap.kotlindaggermitch.viewmodel.ViewModelProviderFactory
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject

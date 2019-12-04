@@ -2,7 +2,7 @@ package com.sap.kotlindaggermitch.di.subcomponents.auth
 
 import androidx.lifecycle.ViewModel
 import com.sap.kotlindaggermitch.di.ViewModelKey
-import com.sap.kotlindaggermitch.viewmodel.MainViewModel
+import com.sap.kotlindaggermitch.viewmodel.main.MainViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

@@ -2,7 +2,7 @@ package com.sap.kotlindaggermitch.di
 
 import com.sap.kotlindaggermitch.di.subcomponents.auth.MainModule
 import com.sap.kotlindaggermitch.di.subcomponents.auth.MainViewModelModule
-import com.sap.kotlindaggermitch.ui.MainActivity
+import com.sap.kotlindaggermitch.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

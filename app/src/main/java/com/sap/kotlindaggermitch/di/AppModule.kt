@@ -1,8 +1,9 @@
 package com.sap.kotlindaggermitch.di
 
 import android.content.Context
-import androidx.annotation.NonNull
-import com.sap.kotlindaggermitch.network.ApiRepo
+import com.sap.kotlindaggermitch.repository.UserRepository
+import com.sap.kotlindaggermitch.storage.local.user.UsersDao
+import com.sap.kotlindaggermitch.storage.remote.ApiRepo
 import com.sap.kotlindaggermitch.utils.AppConstants
 import dagger.Module
 import dagger.Provides
@@ -31,5 +32,20 @@ class AppModule {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideAuthApi(retrofit: Retrofit): ApiRepo {
+        return retrofit.create(ApiRepo::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideUserRepository(apiRepo: ApiRepo, usersDao : UsersDao): UserRepository {
+        return UserRepository(
+            apiRepo,
+            usersDao
+        )
     }
 }
