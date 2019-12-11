@@ -52,8 +52,8 @@ class UserRepository @Inject constructor(
     fun getUser(id: Int): LiveData<User> {
 
         apiRepo.getUser(id)
-            .observeOn(Schedulers.io())
-            .subscribeOn(AndroidSchedulers.mainThread())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
             .subscribe(
                 { user ->
                     _user.value = user
